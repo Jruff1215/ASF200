@@ -1,12 +1,9 @@
-applePrice = "$0.50"
+applePrice = 0.55
 
-name_insert = "Please enter your name:"
-name_output = "John"
-appleAmount = "6"
-message_1 = f"Hi {name_output.title()}. Apples cost {applePrice} each. How many would you like to buy?"
-message_2 = f"Thank you {name_output.title()} for your purchase of {appleAmount} apples at a cost of {applePrice} each."
-print(name_insert)
-print(name_output)
-print(message_1,)
+name = input("Please enter your name: ")
+message_1 = "Hi "+ name +". Apples cost "+ str(applePrice) +" cents each. How many would you like to buy?"
+appleAmount = float(input(message_1))
+message_2 = "Thank you "+ name +" for your purchase of "+ str(appleAmount) + " apples at a cost of "+ str(applePrice) +" cents each."
+thanks = (message_2)
 print(appleAmount)
-print(message_2)
+print(thanks)

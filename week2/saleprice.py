@@ -18,8 +18,8 @@ elif product_price > 19.99:
     discount = product_price * .15
    # product_price = (float(product_price - product_price * .15))
 total_discount = discount * product_quantity
-price = raw_total 
-#- total_discount
+price = raw_total - total_discount
+
 
 sales_tax = price * 0.065  
 final_total = price + sales_tax

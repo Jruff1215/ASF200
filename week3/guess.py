@@ -49,7 +49,7 @@ while wrongGuesses > 0 and winGame == False:
                 winGame = True
         else:
             wrongGuesses -=1
-            print("I'm sorry but there is no letter " + guess + "in the word")
+            print("I'm sorry but there is no letter " + guess + " in the word")
             print(f"You have {wrongGuesses} left. ")
             showBoard()
 if wrongGuesses == 0:

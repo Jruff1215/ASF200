@@ -12,11 +12,11 @@ class Die:
   
    def showDieFace(self):
        print(self.value)
-Die1 = Die(100)
-Die2 = Die(100)
-Die3 = Die(100)
-Die4 = Die(100)
-Die5 = Die(100)
+Die1 = Die(2)
+Die2 = Die(2)
+Die3 = Die(2)
+Die4 = Die(2)
+Die5 = Die(2)
 Die1.roll()
 Die2.roll()
 Die3.roll()

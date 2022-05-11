@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <title>Trivia Game Questions</title>
+</head>
+<body>
+    <h1>Test Your Trivia Knowledge</h1>
+    <ol class="trivGame">
+        <h2>{{results[0].getCategory()}}</h2>
+        <form action="http://127.0.0.1:5000/score" method="POST">
+        {% for question in results %} 
+		<li class="card">
+            <div class="question">
+                {{question.getQuestions()|safe}}
+            </div>
+            <div class="shuffledAnswers">
+                {% for answer in question.getShuffledAnswers()%}
+                <span style="margin-left: 15px">
+                    <input type="radio" value="{{answer}}" name="{{question.id}}"/> {{answer}}  
+                </span>
+                {% endfor %}
+            </div>
+        </li> 
+        {% endfor %}
+
+        <button style="postion:relative; top:30px;" type="submit">Score</button>
+
+        </form>       
+
+                
+    </ol> 
+</body>
+</html>

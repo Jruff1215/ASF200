@@ -5,6 +5,7 @@
 
 <body>
     <h1>You got the following questions correct:</h1>
+    <form action="http://127.0.0.1:5000/" method="GET">
     {% for question in content.correct %} 
     <p>&#x2022; {{question.getQuestions()|safe}}</p>
         <p style="margin-left: 15px">&#8211; {{question.getCorrectAnswer()|safe}}</p>
@@ -16,6 +17,5 @@
         <p style="margin-left: 15px">&#8211; {{question.getCorrectAnswer()|safe}}</p>
     {% endfor %}
 
-    <button>
-</body>
+    <button type="submit">Play Again</button></body>
 </html>

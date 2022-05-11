@@ -90,10 +90,8 @@ class AuthorizedUsers():
         
     def showUsers(self):
         for user in self.authUsers:
-            userFirstName = user["name"]['first']
-            userLastName = user["name"]['last']
-            userEmail = user['email']
-            print(userFirstName, userLastName, f"({userEmail})")
+            
+            print(user)
    
 
 def getUsers():
@@ -122,7 +120,8 @@ jsonUserData = getUsers()
 
 for userInfo in jsonUserData["results"]:
     
-    userList.addUser(userInfo)
+    newUser = User(userInfo["name"]['first'], userInfo["name"]['last'], userInfo['email'], userInfo['username'], userInfo['password'], userInfo['uuid'], userInfo['phone'], userInfo['cell'], userInfo['large'], userInfo['thumbnail'] )
+    userList.addUser(newUser)
     
     
 userList.showUsers()

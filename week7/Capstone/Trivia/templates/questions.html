@@ -15,7 +15,7 @@
             <div class="shuffledAnswers">
                 {% for answer in question.getShuffledAnswers()%}
                 <span style="margin-left: 15px">
-                    <input type="radio" value="{{answer}}" name="{{question.id}}"/> {{answer}}  
+                    <input type="radio" value="{{answer}}" name="{{question.id}}"/> {{answer|safe}}  
                 </span>
                 {% endfor %}
             </div>

@@ -7,13 +7,13 @@
     <h1>You got the following questions correct:</h1>
     {% for question in content.correct %} 
     <p>&#x2022; {{question.getQuestions()|safe}}</p>
-        <p style="margin-left: 15px">&#8211; {{question.getCorrectAnswer()}}</p>
+        <p style="margin-left: 15px">&#8211; {{question.getCorrectAnswer()|safe}}</p>
     {% endfor %}
 
     <h1>You answered the following questions incorrectly:</h1>
     {% for question in content.incorrect %} 
     <p>&#x2022; {{question.getQuestions()|safe}}</p>
-        <p style="margin-left: 15px">&#8211; {{question.getCorrectAnswer()}}</p>
+        <p style="margin-left: 15px">&#8211; {{question.getCorrectAnswer()|safe}}</p>
     {% endfor %}
 
     <button>
